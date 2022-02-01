@@ -10,6 +10,15 @@ class Product extends Model {}
 Product.init(
   {
     // define columns
+    // TODO: id column -> int, NO null values, primary key, auto increment
+
+    // TODO: product_name column -> string, NO null values
+
+    // TODO: price column -> decimal, no null values, validates value is decimal
+
+    // TODO: stock column -> int, no null values, default value of 10, validates value is numeric
+
+    // TODO: category_id column -> int, references the category model's id
   },
   {
     sequelize,
