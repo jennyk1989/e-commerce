@@ -16,7 +16,7 @@ Category.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    // TODO: category_name column -> string, NO null values
+    // category_name column -> string, NO null values
     category_name: {
       type: DataTypes.STRING,
       allowNull: false,
