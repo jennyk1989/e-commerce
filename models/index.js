@@ -4,7 +4,7 @@ const Category = require('./Category');
 const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
 
-// TODO: Products belongs to Category, as a category can have multiple
+// Products belongs to Category, as a category can have multiple
 // products but a product can only belong to one category
 Product.belongsTo(Category, { //Products belongs to Category model
   foreignKey: 'category_id' // Product category_id references the category model's id
