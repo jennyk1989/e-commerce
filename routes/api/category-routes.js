@@ -13,10 +13,8 @@ router.get('/', (req, res) => {
       attributes: ['product_name']
     }
   })
-  .then(data => {
-    res.json(data);
-    if (err) throw err;
-  });
+  .then(data => res.json(data))
+  .catch((err) => res.status(500).json(err));
 });
 
 router.get('/:id', (req, res) => {
@@ -32,10 +30,8 @@ router.get('/:id', (req, res) => {
       attributes: ['category_id']
     }
   })
-  .then(data => {
-    res.json(data);
-    if (err) res.status(500).send('findOne query not valid');
-  });
+  .then(data => res.json(data))
+  .catch((err) => res.status(500).json(err));
 });
 
 router.post('/', (req, res) => {
@@ -44,10 +40,8 @@ router.post('/', (req, res) => {
     //category model has a category_name column
     category_name: req.body.category_name
   })
-  .then(data => {
-    res.json(data);
-    if (err) res.status(500).send('create method not valid');
-  });
+  .then(data => res.json(data))
+  .catch((err) => res.status(500).json(err));
 });
 
 router.put('/:id', (req, res) => {
@@ -65,10 +59,8 @@ router.put('/:id', (req, res) => {
       }
     }
   )
-  .then(data => {
-    res.json(data);
-    if (err) res.status(500).send('category update not successful');
-  });
+  .then(data => res.json(data))
+  .catch((err) => res.status(500).json(err));
 });
 
 router.delete('/:id', (req, res) => {
@@ -79,10 +71,8 @@ router.delete('/:id', (req, res) => {
       id: req.params.id
     }
   })
-  .then(data => {
-    res.json(data);
-    if (err) res.status(500).send('category delete not successful');
-  });
+  .then(data => res.json(data))
+  .catch((err) => res.status(500).json(err));
 });
 
 module.exports = router;

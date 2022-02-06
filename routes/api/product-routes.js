@@ -21,10 +21,8 @@ router.get('/', (req, res) => {
       }
     ]
   })
-  .then(data => {
-    res.json (data);
-    if (err) res.status(500).send('products query not successful');
-  });
+  .then(data => res.json(data))
+  .catch((err) => res.status(500).json(err));
 });
 
 // get one product
@@ -49,10 +47,8 @@ router.get('/:id', (req, res) => {
       }
     ]
   })
-  .then(data => {
-    res.json (data);
-    if (err) res.status(500).send('product query not successful');
-  });
+  .then(data => res.json(data))
+  .catch((err) => res.status(500).json(err));
 });
 
 // create new product
@@ -141,10 +137,8 @@ router.delete('/:id', (req, res) => {
       id: req.params.id
     }
   })
-  .then(data => {
-    res.json (data);
-    if (err) res.status(500).send('product query not successful');
-  });
+  .then(data => res.json(data))
+  .catch((err) => res.status(500).json(err));
 });
 
 module.exports = router;

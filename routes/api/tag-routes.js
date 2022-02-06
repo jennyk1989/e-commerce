@@ -14,10 +14,8 @@ router.get('/', (req, res) => {
       }
     ]
   })
-  .then(data => {
-    res.json (data);
-    if (err) res.status(500).send('findAll query not valid');
-  });
+  .then(data => res.json(data))
+  .catch((err) => res.status(500).json(err));
 });
 
 router.get('/:id', (req, res) => {
@@ -35,10 +33,8 @@ router.get('/:id', (req, res) => {
       }
     ]
   })
-  .then(data => {
-    res.json (data);
-    if (err) res.status(500).send('findOne query not valid');
-  });
+  .then(data => res.json(data))
+  .catch((err) => res.status(500).json(err));
 });
 
 router.post('/', (req, res) => {
@@ -64,10 +60,8 @@ router.put('/:id', (req, res) => {
       }
     }
   )
-  .then(data => {
-    res.json (data);
-    if (err) res.status(500).send('update not valid');
-  });
+  .then(data => res.json(data))
+  .catch((err) => res.status(500).json(err));
 });
 
 router.delete('/:id', (req, res) => {
@@ -78,10 +72,8 @@ router.delete('/:id', (req, res) => {
       id: req.params.id
     }
   })
-  .then(data => {
-    res.json (data);
-    if (err) res.status(500).send('deletion not valid');
-  });
+  .then(data => res.json(data))
+  .catch((err) => res.status(500).json(err));
 });
 
 module.exports = router;
