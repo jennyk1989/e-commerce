@@ -42,10 +42,8 @@ router.post('/', (req, res) => {
   Tag.create({ //Sequelize's create method
     tag_name: req.body.tag_name
   })
-  .then(data => {
-    res.json (data);
-    if (err) res.status(500).send('create not valid');
-  });
+  .then(data => res.json(data))
+  .catch((err) => res.status(500).json(err));
 });
 
 router.put('/:id', (req, res) => {
