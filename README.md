@@ -15,9 +15,9 @@ The challenge is to built the back end for an e-commerce site, using Express.js,
 ## Usage
 ### Video
 See creation of schema and server startup:
-https://user-images.githubusercontent.com/92952780/152667707-d57ea145-1742-4103-98cc-43e8bfac4ea1.mp4
+https://user-images.githubusercontent.com/92952780/152667707-d57ea145-1742-4103-98cc-43e8bfac4ea1.mp4 
 See demonstration of routes in Insomnia: 
-https://user-images.githubusercontent.com/92952780/152667708-b7a2801c-96a2-404d-bcea-3c7753534fec.mp4
+https://user-images.githubusercontent.com/92952780/152667708-b7a2801c-96a2-404d-bcea-3c7753534fec.mp4 
 ### Screenshots
 MySql created tables:
 <img width="739" alt="seededtables1" src="https://user-images.githubusercontent.com/92952780/152667713-40e43c3c-790c-4a85-9bae-38cedd35991d.png">
