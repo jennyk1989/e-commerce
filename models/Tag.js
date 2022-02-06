@@ -10,6 +10,7 @@ Tag.init(
     // id column -> int, no null values, primary key, auto increment
     id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
@@ -23,7 +24,7 @@ Tag.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'tag',
+    modelName: 'Tag',
   }
 );
 

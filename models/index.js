@@ -12,19 +12,18 @@ Product.belongsTo(Category, { //Products belongs to Category model
 // Category has many Product models
 Category.hasMany(Product, {
   foreignKey: 'category_id' 
-
-})
+});
 // Products belongs to many Tag models. Using the ProductTag through model,
 // allow products to have mulitple tags & tags to have many products
 Product.belongsToMany(Tag, {
   through: ProductTag, //through model
   foreignKey: 'product_id' 
-})
+});
 // Tags belongs to many Product models
 Tag.belongsToMany(Product, {
   through: ProductTag, //uses ProductTag through model
   foreignKey: 'tag_id'
-})
+});
 module.exports = {
   Product,
   Category,

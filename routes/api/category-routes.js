@@ -8,19 +8,15 @@ router.get('/', (req, res) => {
   // find all categories
   // async findAll(options: object): Promise<Array<Model>>
   Category.findAll({ //sequelize's findAll() method
-    // be sure to include its associated Products (Product attributes)
-    include: [
-      {
-        model: Product,
-        // all columns in Product model as attributes
-        attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
-      }
-    ]
+    include: {
+      model: Product,
+      attributes: ['product_name']
+    }
   })
   .then(data => {
-    res.json (data);
-    if (err) res.status(500).send('findAll query not valid');
-  })
+    res.json(data);
+    if (err) throw err;
+  });
 });
 
 router.get('/:id', (req, res) => {
@@ -31,17 +27,15 @@ router.get('/:id', (req, res) => {
       id: req.params.id //using req.params instead of req.body bc its a /:id endpoint
     },
     // be sure to include its associated Products
-    include: [
-      {
-        model: Product,
-        attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
-      }
-    ]
+    include: {
+      model: Product,
+      attributes: ['category_id']
+    }
   })
   .then(data => {
-    res.json (data);
+    res.json(data);
     if (err) res.status(500).send('findOne query not valid');
-  })
+  });
 });
 
 router.post('/', (req, res) => {
@@ -51,9 +45,9 @@ router.post('/', (req, res) => {
     category_name: req.body.category_name
   })
   .then(data => {
-    res.json (data);
+    res.json(data);
     if (err) res.status(500).send('create method not valid');
-  })
+  });
 });
 
 router.put('/:id', (req, res) => {
@@ -72,9 +66,9 @@ router.put('/:id', (req, res) => {
     }
   )
   .then(data => {
-    res.json (data);
+    res.json(data);
     if (err) res.status(500).send('category update not successful');
-  })
+  });
 });
 
 router.delete('/:id', (req, res) => {
@@ -86,9 +80,9 @@ router.delete('/:id', (req, res) => {
     }
   })
   .then(data => {
-    res.json (data);
+    res.json(data);
     if (err) res.status(500).send('category delete not successful');
-  })
+  });
 });
 
 module.exports = router;

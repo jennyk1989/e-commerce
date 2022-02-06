@@ -1,7 +1,7 @@
 {
   "name": "module-13-challenge-orm",
   "version": "1.0.0",
-  "description": "![badge](https://img.shields.io/badge/License-MIT-blue) ## Description The challenge is to built the back end for an e-commerce site, using Express.js, Sequelize, and MySQL. ## Table of Contents  * [Installation](#Installation) * [Usage](#Usage) * [License](#License) * [Contribution](#Contribution) * [Tests](#Tests) * [Questions](#Questions) ## Installation 📥 * Clone repository  * Install Node.js, Express.js, etc. ## Usage ### Video",
+  "description": "The challenge is to built the back end for an e-commerce site, using Express.js, Sequelize, and MySQL.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,12 +18,5 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.3"
-  },
-  "dependencies": {
-    "bcrypt": "^5.0.1",
-    "dotenv": "^8.6.0",
-    "express": "^4.17.2",
-    "mysql2": "^2.3.3",
-    "sequelize": "^5.22.5"
   }
 }
