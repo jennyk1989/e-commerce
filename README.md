@@ -11,7 +11,8 @@ The challenge is to built the back end for an e-commerce site, using Express.js,
 * [Questions](#Questions)
 ## Installation 📥
 * Clone repository 
-* Install Node.js, Express.js, etc.
+* Install Node.js, Express.js, MySql2, Sequelize
+* Videos show how the tables are created & how to start up server
 ## Usage
 ### Video
 #### Creation of schema and server startup:
